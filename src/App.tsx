@@ -11,7 +11,7 @@ function App() {
       <nav className="bg-white shadow-md fixed w-full z-50">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center h-16">
-            <span className="text-xl font-bold text-slate-900">DS</span>
+            <span className="text-xl font-bold text-slate-900">Oscar Silva</span>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -68,14 +68,14 @@ function App() {
 
       {/* Hero Section */}
       <header className="pt-16 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 "></div>
         <AnimatedBackground />
         
         <div className="container mx-auto px-6 py-32 relative">
           <div className="max-w-3xl">
             <h1 className="text-6xl font-bold mb-8 animate-fade-in leading-tight">
               Desarrollo de Software 
-              <span className="text-blue-400">Empresarial</span>
+             <br /> <span className="text-blue-400"> A Medida</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl animate-fade-in-delay-1 leading-relaxed">
               Especialista en soluciones tecnológicas avanzadas para empresas, 
@@ -99,7 +99,6 @@ function App() {
           </div>
         </div>
         
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-50 to-transparent"></div>
       </header>
 
       {/* About Section */}
@@ -115,17 +114,17 @@ function App() {
               />
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold mb-4">Desarrollador Full Stack Senior</h3>
+              <h3 className="text-2xl font-semibold mb-4">Desarrollador Full Stack</h3>
               <p className="text-slate-600 mb-6">
-                Con más de 8 años de experiencia en el desarrollo de soluciones empresariales,
-                me especializo en crear sistemas robustos y escalables que transforman la 
-                operación de las empresas.
+              Con experiencia en el desarrollo de soluciones empresariales, me enfoco en crear sistemas eficientes y 
+              escalables que optimizan procesos y mejoran la operatividad de las empresas. 
+              Siempre estoy aprendiendo y mejorando mis habilidades para ofrecer soluciones tecnológicas de calidad.
               </p>
               <div className="flex gap-4">
-                <a href="https://github.com" className="text-slate-700 hover:text-blue-600 transition transform hover:scale-110">
+                <a href="https://github.com/OscarSilva-918" className="text-slate-700 hover:text-blue-600 transition transform hover:scale-110">
                   <Github size={24} />
                 </a>
-                <a href="https://linkedin.com" className="text-slate-700 hover:text-blue-600 transition transform hover:scale-110">
+                <a href="https://www.linkedin.com/in/oscar-silva-888bb0228/" className="text-slate-700 hover:text-blue-600 transition transform hover:scale-110">
                   <Linkedin size={24} />
                 </a>
               </div>
@@ -179,8 +178,8 @@ function App() {
               </p>
               <ul className="flex flex-wrap gap-2">
                 <li className="px-3 py-1 bg-slate-100 rounded-full text-sm">TypeScript</li>
-                <li className="px-3 py-1 bg-slate-100 rounded-full text-sm">Next.js</li>
-                <li className="px-3 py-1 bg-slate-100 rounded-full text-sm">PostgreSQL</li>
+                <li className="px-3 py-1 bg-slate-100 rounded-full text-sm">React.js</li>
+                <li className="px-3 py-1 bg-slate-100 rounded-full text-sm">MySQL</li>
               </ul>
             </div>
           </div>

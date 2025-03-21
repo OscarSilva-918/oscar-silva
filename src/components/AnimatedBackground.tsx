@@ -54,7 +54,7 @@ const AnimatedBackground: React.FC = () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+        ctx.fillStyle = 'rgba(248, 248, 249, 0.51)';
         ctx.fill();
       }
     }
