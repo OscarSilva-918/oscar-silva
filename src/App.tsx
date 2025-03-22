@@ -68,8 +68,8 @@ function App() {
 
       {/* Hero Section */}
       <header className="pt-16 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 "></div>
-        <AnimatedBackground />
+      <div className="absolute inset-0 "></div>
+      <AnimatedBackground />
         
         <div className="container mx-auto px-6 py-32 relative">
           <div className="max-w-3xl">
@@ -220,14 +220,15 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-900 text-white">
-        <div className="container mx-auto px-6">
+      <section id="contact" className="py-20 bg-slate-900 relative overflow-hidden text-white">
+      <AnimatedBackground />
+        <div className="container mx-auto px-6 relative z-10" >
           <h2 className="text-3xl font-bold mb-12 text-center">Contacto</h2>
           <div className="max-w-xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
               <Mail className="text-blue-400" size={24} />
               <a href="mailto:contacto@ejemplo.com" className="hover:text-blue-400 transition">
-                contacto@ejemplo.com
+                devoscarsilva@gmail.com
               </a>
             </div>
             <form className="space-y-6">
