@@ -1,28 +1,11 @@
-import { useState, useRef  } from 'react';
-import { Github, Linkedin, Mail, MapPin, Terminal, Box, Truck, BarChart as ChartBar, Menu, X } from 'lucide-react';
+import { useState} from 'react';
+import { Github, Linkedin,  MapPin, Terminal, Box, Truck, BarChart as ChartBar, Menu, X } from 'lucide-react';
 import AnimatedBackground from './components/AnimatedBackground';
-import emailjs from '@emailjs/browser';
+import ContactForm from './components/ContactForm';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-    emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
-      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-    })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-    }
+  
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -239,61 +222,8 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-900 relative overflow-hidden text-white">
-      <AnimatedBackground />
-        <div className="container mx-auto px-6 relative z-10" >
-          <h2 className="text-3xl font-bold mb-12 text-center">Contacto</h2>
-          <div className="max-w-xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <Mail className="text-blue-400" size={24} />
-              <a href="mailto:contacto@ejemplo.com" className="hover:text-blue-400 transition">
-                devoscarsilva@gmail.com
-              </a>
-            </div>
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
-              <div>
-                <input
-                  name="user_name"
-                  type="text"
-                  placeholder="Nombre"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500 transition"
-                />
-              </div>
-              <div>
-                <input
-                  name="user_email"
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500 transition"
-                />
-              </div>
-              <div>
-                <textarea
-                  name="message"
-                  placeholder="Mensaje"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500 transition"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105"
-              >
-                Enviar Mensaje
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-{/* <form >
-      <label>Name</label>
-      <input type="text"  />
-      <label>Email</label>
-      <input type="email"  />
-      <label>Message</label>
-      <textarea  />
-      <input style={{zIndex:"1000"}} type="submit" value="Send" />
-    </form> */}
+     
+      <ContactForm></ContactForm>
       <footer className="bg-slate-900 text-slate-400 py-8">
         <div className="container mx-auto px-6 text-center">
           <p>© 2024 - Todos los derechos reservados</p>
