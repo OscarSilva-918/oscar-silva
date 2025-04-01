@@ -1,9 +1,28 @@
-import React, { useState } from 'react';
+import { useState, useRef  } from 'react';
 import { Github, Linkedin, Mail, MapPin, Terminal, Box, Truck, BarChart as ChartBar, Menu, X } from 'lucide-react';
 import AnimatedBackground from './components/AnimatedBackground';
+import emailjs from '@emailjs/browser';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
+      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    }
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -231,9 +250,10 @@ function App() {
                 devoscarsilva@gmail.com
               </a>
             </div>
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <input
+                  name="user_name"
                   type="text"
                   placeholder="Nombre"
                   className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500 transition"
@@ -241,6 +261,7 @@ function App() {
               </div>
               <div>
                 <input
+                  name="user_email"
                   type="email"
                   placeholder="Email"
                   className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500 transition"
@@ -248,6 +269,7 @@ function App() {
               </div>
               <div>
                 <textarea
+                  name="message"
                   placeholder="Mensaje"
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500 transition"
@@ -263,7 +285,15 @@ function App() {
           </div>
         </div>
       </section>
-
+{/* <form >
+      <label>Name</label>
+      <input type="text"  />
+      <label>Email</label>
+      <input type="email"  />
+      <label>Message</label>
+      <textarea  />
+      <input style={{zIndex:"1000"}} type="submit" value="Send" />
+    </form> */}
       <footer className="bg-slate-900 text-slate-400 py-8">
         <div className="container mx-auto px-6 text-center">
           <p>© 2024 - Todos los derechos reservados</p>
