@@ -55,7 +55,8 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div>
                   <input
-                    name="user_email"
+                    id="email"
+                    name="email"
                     type="email"
                     placeholder="Email"
                     className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500 transition"
