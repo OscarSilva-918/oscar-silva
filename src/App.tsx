@@ -107,7 +107,7 @@ function App() {
 
         <div className="container mx-auto px-6 py-32 relative">
           <div className="max-w-3xl">
-            <h1 className="text-6xl font-bold mb-4 animate-fade-in leading-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold mb-4 animate-fade-in leading-tight">
               Páginas web, apps y automatizaciones para
               <br /> <span className="text-blue-400"> PyMEs locales.</span>
             </h1>
@@ -140,7 +140,7 @@ function App() {
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Sobre mí</h2>
-          <div className="flex gap-12 items-start">
+          <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="flex-1 transform hover:scale-105 transition duration-500">
               <img
                 src={foto}
@@ -233,13 +233,13 @@ function App() {
                 <h3 className="text-xl font-semibold">Proyecto Ecommerce</h3>
               </div>
               <a href="https://misiomarket-app.vercel.app/">
-              <div className="mb-4 overflow-hidden rounded-lg">
-                <img
-                  src="https://media.istockphoto.com/id/1428709516/es/foto/compras-en-l%C3%ADnea-mujer-mano-compras-en-l%C3%ADnea-en-computadora-port%C3%A1til-con-diagrama-de-icono.jpg?s=1024x1024&w=is&k=20&c=0tc26isn1iwBi9Iy3G1RulocAmCZ8dFFru8tisqE-yg="
-                  alt="Ecommerce Store"
-                  className="w-full h-48 object-cover transform hover:scale-110 transition duration-500"
-                />
-              </div>
+                <div className="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="https://media.istockphoto.com/id/1428709516/es/foto/compras-en-l%C3%ADnea-mujer-mano-compras-en-l%C3%ADnea-en-computadora-port%C3%A1til-con-diagrama-de-icono.jpg?s=1024x1024&w=is&k=20&c=0tc26isn1iwBi9Iy3G1RulocAmCZ8dFFru8tisqE-yg="
+                    alt="Ecommerce Store"
+                    className="w-full h-48 object-cover transform hover:scale-110 transition duration-500"
+                  />
+                </div>
               </a>
               <p className="text-slate-600 mb-4">
                 Plataforma ecommerce para la venta en línea con integración de
